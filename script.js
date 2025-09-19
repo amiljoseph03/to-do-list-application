@@ -10,6 +10,7 @@ const addtask=()=>{
     // console.log(tasks)
     taskinput.value=""
     updatetasklist()
+    updatestatus();
 }
 }
 
@@ -17,12 +18,14 @@ const toggleTaskComplete= (index)=>{
     tasks[index].completed=!tasks[index].completed
     // console.log({tasks})
     updatetasklist()
+    updatestatus()
 }
 // ... delete... ... 
 
 const deletetask=(index)=>{
   tasks.splice(index,1)
   updatetasklist()
+  updatestatus()
 }
 
 //edit......
@@ -32,7 +35,21 @@ const edittask=(index)=>{
 
     tasks.splice(index,1)
     updatetasklist()
+    updatestatus()
 }
+
+//..update the status
+
+const updatestatus=()=>{
+    const completetasks=tasks.filter(task=>task.completed).length
+    const totaltasks=tasks.length
+    const progress = totaltasks===0?0:(completetasks/totaltasks)*100
+    // const progressbar=document.getElementById('progress')
+
+    document.getElementById('numbers').innerText=`${completetasks}/${totaltasks}`
+    
+}
+
 
 const updatetasklist=()=>{
 const tasklist= document.getElementById('task-list')
