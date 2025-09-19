@@ -20,15 +20,17 @@ tasks.forEach((task, index)=>{
     const listitem =document.createElement('li')
     listitem.innerHTML = `
     <div class="taskitem">
-       <div class="task ${task.completed? 'completed':''}">
-        <input type="checkbox" class="checkbox" />
-        <p> finish project</p>
+       <div class="task ${task.completed ? 'completed' : ''}">
+        <input type="checkbox" class="checkbox" ${
+          task.completed ? 'checked' : ''
+        }/>
+        <p> ${task.text}</p>
         </div>
         <div class="icons">
        
 
-        <img src="./img/edit.png" alt="edit"/>
-        <img src="./img/bin.jpg" alt="delete"/>
+        <img src="./img/edit.png" alt="edit" onClick="edittask(${index}") />
+        <img src="./img/bin.jpg" alt="delete" onClick="deletetask(${index}")/>
 
         </div>
     </div>`;

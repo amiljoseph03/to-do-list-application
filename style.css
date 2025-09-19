@@ -46,3 +46,39 @@ form{
     width: 100%;
     display: flex;
 }
+
+
+
+.taskitem{
+    display: flex;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+
+}
+
+.taskitem img{
+    width: 24px; 
+    height: 24px;
+    margin: 0 10px;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input{
+    width: 20px;
+    height: 20px;
+}
