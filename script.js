@@ -18,13 +18,21 @@ const toggleTaskComplete= (index)=>{
     // console.log({tasks})
     updatetasklist()
 }
-// ... ... ... 
+// ... delete... ... 
 
 const deletetask=(index)=>{
   tasks.splice(index,1)
   updatetasklist()
 }
 
+//edit......
+const edittask=(index)=>{
+    const taskinput =document.getElementById('taskinput')
+    taskinput.value=tasks[index].text
+
+    tasks.splice(index,1)
+    updatetasklist()
+}
 
 const updatetasklist=()=>{
 const tasklist= document.getElementById('task-list')
