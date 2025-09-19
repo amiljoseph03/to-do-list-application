@@ -82,3 +82,9 @@ form{
     width: 20px;
     height: 20px;
 }
+
+.completed p{
+    text-decoration: line-through;
+    color: aqua;
+}
+

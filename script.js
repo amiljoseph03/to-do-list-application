@@ -6,9 +6,16 @@ const addtask=()=>{
 
     if (text){
         tasks.push({text:text, completed:false})
-    }
+    
     // console.log(tasks)
+    taskinput.value=""
+    updatetasklist()
+}
+}
 
+const toggleTaskComplete= (index)=>{
+    tasks[index].completed=!tasks[index].completed
+    // console.log({tasks})
     updatetasklist()
 }
 
