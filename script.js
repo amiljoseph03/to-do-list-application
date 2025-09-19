@@ -44,7 +44,9 @@ const updatestatus=()=>{
     const completetasks=tasks.filter(task=>task.completed).length
     const totaltasks=tasks.length
     const progress = totaltasks===0?0:(completetasks/totaltasks)*100
-    // const progressbar=document.getElementById('progress')
+    const progressbar=document.getElementById('progress')
+
+    progressbar.style.width=`${progress}%`
 
     document.getElementById('numbers').innerText=`${completetasks}/${totaltasks}`
     

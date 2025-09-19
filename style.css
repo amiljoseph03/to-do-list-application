@@ -28,10 +28,10 @@ body{
     gap: 50px;
 }
 
-.progressbar{
+#progressbar{
     width: 100%;
     height: 10px;
-    background-color: green;
+    background-color: rgb(151, 160, 151);
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -122,10 +122,10 @@ button{
 .detials{
     width: 100%;
 }
-.progress{
-    width: 50%;
+#progress{
+    width: 0%;
     height: 10px;
-    background-color: azure;
+    background-color: green;
     border-radius: 5px;
     margin-top: 20px;
 }
