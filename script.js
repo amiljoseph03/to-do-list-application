@@ -18,6 +18,13 @@ const toggleTaskComplete= (index)=>{
     // console.log({tasks})
     updatetasklist()
 }
+// ... ... ... 
+
+const deletetask=(index)=>{
+  tasks.splice(index,1)
+  updatetasklist()
+}
+
 
 const updatetasklist=()=>{
 const tasklist= document.getElementById('task-list')
@@ -36,8 +43,10 @@ tasks.forEach((task, index)=>{
         <div class="icons">
        
 
-        <img src="./img/edit.png" alt="edit" onClick="edittask(${index}") />
-        <img src="./img/bin.jpg" alt="delete" onClick="deletetask(${index}")/>
+       
+        <img src="./img/edit.png" alt="edit" onClick="edittask(${index})" />
+        <img src="./img/bin.jpg" alt="delete" onClick="deletetask(${index})"/>
+
 
         </div>
     </div>`;
